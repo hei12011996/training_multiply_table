@@ -13,6 +13,7 @@ function isStartEndNumberValid(startNumber, endNumber) {
 }
 
 function getMultiplyStringOfNumber(startNumber, endNumber) {
+	return startNumber + "*" + endNumber + "=" + startNumber * endNumber;
 }
 
 function constructMultiplyTable(multiplyStrings) {
