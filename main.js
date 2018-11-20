@@ -1,4 +1,16 @@
 function getMultiplyTable(startNumber, endNumber) {
+	if (!isStartEndNumberValid(startNumber, endNumber)) {
+		return null;
+	}
+	multiplyStrings = [];
+	for (let i = startNumber; i <= endNumber; i++) {
+		for (let j = startNumber; j <= endNumber; j++) {
+			if (i >= j) {
+				multiplyStrings.push(getMultiplyStringOfNumber(j, i));
+			}
+		}
+	}
+	return constructMultiplyTable(multiplyStrings);
 }
 
 function isStartEndNumberValid(startNumber, endNumber) {
