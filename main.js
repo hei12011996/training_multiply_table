@@ -20,6 +20,8 @@ function isStartEndNumberValid(startNumber, endNumber) {
 		return false;
 	} else if (!(endNumber >= 1 && endNumber <= 1000)) {
 		return false;
+	} else if (startNumber > endNumber) {
+		return false;
 	}
 	return true;
 }
